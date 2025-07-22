@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# Chat-with-pdf--10-minutes-school
-=======
 # Multilingual PDF Chatbot (RAG System)
 
 ## About the Project
@@ -113,4 +110,3 @@ python evaluation.py
 
 ---
 
->>>>>>> 11de1a1 (Initial commit: Multilingual PDF Chatbot (RAG System))
