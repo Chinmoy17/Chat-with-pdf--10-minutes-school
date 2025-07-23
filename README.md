@@ -101,10 +101,12 @@ python evaluation.py
 
 - **Tesseract Path:**  
   Make sure to set the correct path for Tesseract OCR in your code as shown above.
-- **Sample Queries:**  
-  - অনুপমের ভাষায় সুপুরুষ কাকে বলা হয়েছে?
-  - কাকে অনুপম ভাগ্য দেবতা বলে উল্লেখ করা হয়েছে?
-  - বিয়ের সময় কল্যাণীর প্রকৃত বয়স কত ছিল?
+ ** This app could be further improved such as:
+ -Adding and option for MCQ mode and CQ mode.
+ -As we can already add multiple pdfs, we can use it in many other ways such as comparing Resumes and other stuffs too.
+ -Moreover, It is kind of in a generalized state. We can work more on specific pdf criterias too if given the goal!!
+ -The prompt is designed to  give the answers in the asked language.
+ -If given cloud access, it could be hosted too.
 - **API Documentation:**  
   See FastAPI docs at `/docs` after running the API.
 

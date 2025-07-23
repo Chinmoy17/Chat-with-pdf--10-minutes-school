@@ -19,8 +19,6 @@ import re
 import unicodedata
 
 def clean_text(text):
-    # Remove page numbers (lines that are just numbers)
-    text = re.sub(r'^\s*\d+\s*$', '', text, flags=re.MULTILINE)
     # Remove common headers/footers (customize as needed)
     text = re.sub(r'^.*(HSC.*Bangla.*Paper).*\n?', '', text, flags=re.MULTILINE | re.IGNORECASE)
     # Normalize unicode (for Bangla/English)
