@@ -14,7 +14,7 @@ This project is a **Retrieval-Augmented Generation (RAG) system** designed to an
 - Evaluation tools for answer quality
 
 ---
-![Demo Screenshot](demo.png)
+![Demo Screenshot](Demo.png)
 
 ## How to Run the Project
 
