@@ -1,33 +1,69 @@
-# PDF-ALAP  
-## Multilingual PDF & Image Chatbot (RAG System)
+# **PDF-ALAP**  
+## *Multilingual PDF & Image Chatbot (RAG System)*
 
 ![Demo Screenshot](general.png)
 
-## About the Project
-
-**PDF-ALAP** is a privacy-focused, multilingual chatbot that lets you interact with your own PDF and image documents—extracting, searching, and answering questions in both Bangla and English.  
-It’s designed for anyone who needs fast, secure, and accurate information retrieval from large or complex documents, including scanned files.
-
-**Why this project?**  
-Built from scratch to solve the real problem of searching and understanding information locked inside PDFs and images—without sending your data to the cloud.  
-It’s ideal for students, educators, researchers, HR, legal, and anyone who values data privacy.
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)  
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.20%2B-ff4b4b.svg)](https://streamlit.io/)  
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.95%2B-009688.svg)](https://fastapi.tiangolo.com/)  
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)  
+[![Made with ❤️](https://img.shields.io/badge/Made%20with-❤️-red.svg)](#)  
 
 ---
 
-## Key Features
+## 🎥 Demo
+Here’s PDF-ALAP in action:  
 
-- **Multilingual Support:** Ask and get answers in Bangla or English.
-- **Works with Any PDF or Image:** Handles both text-based and scanned/image-based documents using OCR.
-- **Data Privacy:** All processing is local—your documents and questions never leave your machine.
-- **Advanced Text Cleaning:** Removes noise, preserves structure (like MCQs), and normalizes text for best results.
-- **Semantic Search:** Uses state-of-the-art vector search (FAISS) and embeddings for accurate retrieval.
-- **Conversational Memory:** Remembers your chat history for a natural Q&A experience.
-- **Modern Chatbot UI:** Streamlit-based interface for easy, interactive use.
-- **REST API:** FastAPI backend for integration with other apps or automation.
-- **Evaluation Tools:** Built-in scripts to measure answer quality and relevance.
-- **Flexible Use Cases:** Education, resume comparison, legal document search, and more.
+![PDF-ALAP Demo](demo.gif)  
+*(Replace `demo.gif` with your actual GIF file name in the repo)*
 
 ---
+
+## 📌 About the Project
+**PDF-ALAP** is a **privacy-first, multilingual chatbot** that allows you to interact with **your own PDF and image documents**—in **Bangla** or **English**.  
+Whether your files are text-based or scanned, PDF-ALAP extracts, searches, and answers your questions instantly.
+
+This project was built to address a **real problem**:  
+Finding and understanding information **locked inside PDFs and images**, **without uploading them to the cloud**.  
+
+Perfect for:
+- 📚 Students & Educators
+- 📄 Researchers & Legal Professionals
+- 🧾 HR & Corporate Teams
+- 🔍 Anyone who values **data privacy**
+
+---
+
+## 🚀 Key Features
+
+- 🌏 **Multilingual Support** – Ask questions in **Bangla** or **English**
+- 📄 **Works with Any PDF or Image** – Supports scanned/image files with **OCR**
+- 🔐 **Data Privacy First** – All processing stays **local**; no cloud upload
+- 🧹 **Advanced Text Cleaning** – Removes noise & preserves structure (including MCQs)
+- 🎯 **Semantic Search** – Accurate results powered by **FAISS** & embeddings
+- 💬 **Conversational Memory** – Maintains context across multiple queries
+- 🖥 **Modern UI** – Built with **Streamlit** for smooth, interactive chats
+- ⚡ **REST API** – **FastAPI** backend for integration & automation
+- 📊 **Evaluation Tools** – Check and measure answer quality
+- 🔄 **Flexible Use Cases** – Education, resume comparison, legal document search, and more
+
+---
+
+## 🛠 How It Works
+
+1. **Upload** one or more PDFs (text or scanned)
+2. **Ask** questions in Bangla or English
+3. **Receive** instant, document-grounded answers
+4. **Enjoy privacy** – all processing stays on your device
+
+---
+
+## 📥 Getting Started
+
+### 1️⃣ Install Dependencies
+```sh
+pip install -r requirements.txt
+
 
 ## How It Works
 
@@ -71,28 +107,35 @@ uvicorn api:app --reload
 Access the API docs at http://127.0.0.1:8000/docs
 Use /upload_pdf/ to upload a PDF and /ask to ask questions.
 
-Data Security & Privacy
-Local Processing: All document parsing, embedding, and retrieval happen on your machine.
-No Cloud Upload: Your files and questions are never sent to any server or third party.
-Open Source: Review and modify the code as you wish.
-Example Use Cases
-Education: Instantly answer questions from textbooks, notes, or exam papers.
-Resume/Document Comparison: Find and compare information across multiple PDFs.
-Legal/Research: Search and summarize large legal or research documents.
-MCQ Extraction: Count and retrieve multiple-choice questions from scanned or digital papers.
+## 🔐 Data Security & Privacy
 
-Credits
-Built from scratch by [Your Name]
+- **Local Processing** – All parsing, embedding, and retrieval happen **on your machine**  
+- **No Cloud Upload** – Files & queries are never sent to third parties  
+- **Fully Open Source** – Review, modify, and deploy as you wish  
 
-Designed, coded, and tested all core modules (OCR, chunking, vector search, LLM integration, UI, API, evaluation).
-Special thanks to the open-source community for tools like Streamlit, FastAPI, FAISS, and Tesseract.
-Improvements & Roadmap
-MCQ/CQ mode for specialized question types.
-More advanced chunking (paragraph, MCQ-aware).
-Enhanced document comparison features.
-Cloud/server deployment options (optional).
-More language support and embedding models.
-License
-This project is open source and free to use under the MIT License.
+---
 
-Feel free to fork, contribute, or reach out for collaboration!
+## 💡 Example Use Cases
+
+- 📚 **Education** – Instantly answer questions from textbooks, notes, or exam papers  
+- 🧾 **Resume Comparison** – Match candidate profiles with job descriptions  
+- ⚖ **Legal Research** – Search & summarize lengthy legal documents  
+- 📝 **MCQ Extraction** – Detect and retrieve multiple-choice questions from scanned or digital files  
+
+---
+
+## 🛣 Roadmap
+
+- ✅ **MCQ/CQ Mode** – Specialized handling for question-based documents  
+- ✅ **Paragraph & MCQ-aware Chunking** – Smarter text splitting for better context  
+- ✅ **Advanced Document Comparison** – Side-by-side analysis across multiple PDFs  
+- ☁ **Optional Cloud Deployment** – For team collaboration and remote use  
+- 🌐 **More Languages** – Expanded multilingual embeddings and models  
+
+---
+
+## 🙌 Credits
+
+- **Developer:** Chinmoy Mitra *(Designed, coded, and tested all core modules — OCR, chunking, vector search, LLM integration, UI, API, evaluation)*  
+- **Special Thanks:** Open-source projects like **Streamlit**, **FastAPI**, **FAISS**, and **Tesseract**  
+
