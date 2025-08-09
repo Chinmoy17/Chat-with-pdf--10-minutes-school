@@ -63,9 +63,9 @@ Perfect for:
 ### 1️⃣ Install Dependencies
 ```sh
 pip install -r requirements.txt
+```
 
-
-## How It Works
+### How It Works
 
 1. **Upload** one or more PDFs (text or scanned).
 2. **Ask** questions in Bangla or English—about facts, MCQs, summaries, etc.
@@ -74,10 +74,10 @@ pip install -r requirements.txt
 
 ---
 
-## Getting Started
+### Getting Started
 
 ### 1. Install Dependencies
-```sh
+```
 pip install -r [requirements.txt](http://_vscodecontentref_/2)
 ```
 ### 2.Set Up Environment Variables
@@ -86,8 +86,7 @@ Create a .env file with your Google API key:
 GOOGLE_API_KEY=your_google_api_key_here
 ```
 
-### 
-Install Tesseract OCR on your system.
+### Install Tesseract OCR on your system.
 Add the Tesseract executable path in your code before using pytesseract:
 ```
 import pytesseract
