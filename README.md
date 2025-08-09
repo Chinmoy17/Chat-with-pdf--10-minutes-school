@@ -15,7 +15,7 @@
 Here’s PDF-ALAP in action:  
 
 ![PDF-ALAP Demo](demo.gif)  
-*(Replace `demo.gif` with your actual GIF file name in the repo)*
+
 
 ---
 
@@ -139,3 +139,4 @@ Use /upload_pdf/ to upload a PDF and /ask to ask questions.
 - **Developer:** Chinmoy Mitra *(Designed, coded, and tested all core modules — OCR, chunking, vector search, LLM integration, UI, API, evaluation)*  
 - **Special Thanks:** Open-source projects like **Streamlit**, **FastAPI**, **FAISS**, and **Tesseract**  
 
+#Please give it a up if this project helped anyway. 🙏
