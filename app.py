@@ -4,7 +4,7 @@ from rag_core import get_pdf_text, get_text_chunks, get_vector_store, retrieve_a
 
 def main():
     st.set_page_config("Chat PDF")
-    st.header("Chat with PDF Locally 💁")
+    st.header("PDF-Alap 💁")
 
     # Initialize chat history in session state
     if "chat_history" not in st.session_state:

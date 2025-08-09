@@ -1,115 +1,98 @@
-# Multilingual PDF Chatbot (RAG System)
+# PDF-ALAP  
+## Multilingual PDF & Image Chatbot (RAG System)
+
+![Demo Screenshot](general.png)
 
 ## About the Project
 
-This project is a **Retrieval-Augmented Generation (RAG) system** designed to answer questions in both English and Bangla from a PDF document corpus. It combines state-of-the-art document retrieval with large language models to provide accurate, context-grounded answers to user queries.
+**PDF-ALAP** is a privacy-focused, multilingual chatbot that lets you interact with your own PDF and image documents—extracting, searching, and answering questions in both Bangla and English.  
+It’s designed for anyone who needs fast, secure, and accurate information retrieval from large or complex documents, including scanned files.
 
-**Key Features:**
-- Multilingual support (Bangla & English)
-- PDF knowledge base (text and scanned/image PDFs)
-- Advanced text cleaning and OCR
-- Semantic chunking and vector search (FAISS)
-- Conversational memory (chat history)
-- Streamlit chatbot UI and REST API (FastAPI)
-- Evaluation tools for answer quality
+**Why this project?**  
+Built from scratch to solve the real problem of searching and understanding information locked inside PDFs and images—without sending your data to the cloud.  
+It’s ideal for students, educators, researchers, HR, legal, and anyone who values data privacy.
 
 ---
-![Demo Screenshot](Demo.png)
 
-## How to Run the Project
+## Key Features
 
-### 1. **Install Dependencies**
+- **Multilingual Support:** Ask and get answers in Bangla or English.
+- **Works with Any PDF or Image:** Handles both text-based and scanned/image-based documents using OCR.
+- **Data Privacy:** All processing is local—your documents and questions never leave your machine.
+- **Advanced Text Cleaning:** Removes noise, preserves structure (like MCQs), and normalizes text for best results.
+- **Semantic Search:** Uses state-of-the-art vector search (FAISS) and embeddings for accurate retrieval.
+- **Conversational Memory:** Remembers your chat history for a natural Q&A experience.
+- **Modern Chatbot UI:** Streamlit-based interface for easy, interactive use.
+- **REST API:** FastAPI backend for integration with other apps or automation.
+- **Evaluation Tools:** Built-in scripts to measure answer quality and relevance.
+- **Flexible Use Cases:** Education, resume comparison, legal document search, and more.
+
+---
+
+## How It Works
+
+1. **Upload** one or more PDFs (text or scanned).
+2. **Ask** questions in Bangla or English—about facts, MCQs, summaries, etc.
+3. **Get Answers** instantly, grounded in your documents.
+4. **All data stays on your device**—no cloud upload, no third-party sharing.
+
+---
+
+## Getting Started
+
+### 1. Install Dependencies
 ```sh
-pip install -r requirements.txt
+pip install -r [requirements.txt](http://_vscodecontentref_/2)
+```
+### 2.Set Up Environment Variables
+Create a .env file with your Google API key:
+```
+GOOGLE_API_KEY=your_google_api_key_here
 ```
 
-### 2. **Set Up Environment Variables**
-- Create a `.env` file with your Google API key:
-  ```
-  GOOGLE_API_KEY=your_google_api_key_here
-  ```
-
-### 3. **Set Up Tesseract Path**
-- Install [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) on your system.
-- Add the Tesseract executable path in your code before using pytesseract:
-  ```python
-  import pytesseract
-  pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-  ```
-  (Adjust the path if you installed Tesseract elsewhere.)
-
-### 4. **Run the Streamlit App**
-```sh
+### 
+Install Tesseract OCR on your system.
+Add the Tesseract executable path in your code before using pytesseract:
+```
+import pytesseract
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+```
+### 4.Run the Streamlit App
+```
 streamlit run app.py
 ```
-- Use the sidebar to upload your PDF(s).
-- Ask questions in Bangla or English in the chat interface.
+Use the sidebar to upload your PDF(s).
+Chat with your documents in Bangla or English
 
-### 5. **Run the REST API (Optional)**
-```sh
+### 5. Run the FAST API
+```
 uvicorn api:app --reload
 ```
-- Access the API docs at [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
-- Use `/upload_pdf/` to upload a PDF and `/ask` to ask questions.
+Access the API docs at http://127.0.0.1:8000/docs
+Use /upload_pdf/ to upload a PDF and /ask to ask questions.
 
-### 6. **Run Evaluation (Optional)**
-```sh
-python evaluation.py
-```
-- See tabular results and summary metrics for sample queries.
+Data Security & Privacy
+Local Processing: All document parsing, embedding, and retrieval happen on your machine.
+No Cloud Upload: Your files and questions are never sent to any server or third party.
+Open Source: Review and modify the code as you wish.
+Example Use Cases
+Education: Instantly answer questions from textbooks, notes, or exam papers.
+Resume/Document Comparison: Find and compare information across multiple PDFs.
+Legal/Research: Search and summarize large legal or research documents.
+MCQ Extraction: Count and retrieve multiple-choice questions from scanned or digital papers.
 
----
+Credits
+Built from scratch by [Your Name]
 
-## Task Completion & Answers to Assessment Questions
+Designed, coded, and tested all core modules (OCR, chunking, vector search, LLM integration, UI, API, evaluation).
+Special thanks to the open-source community for tools like Streamlit, FastAPI, FAISS, and Tesseract.
+Improvements & Roadmap
+MCQ/CQ mode for specialized question types.
+More advanced chunking (paragraph, MCQ-aware).
+Enhanced document comparison features.
+Cloud/server deployment options (optional).
+More language support and embedding models.
+License
+This project is open source and free to use under the MIT License.
 
-### **How the Task is Completed**
-- The system accepts queries in both English and Bangla.
-- It retrieves relevant chunks from a vectorized PDF knowledge base (using FAISS).
-- Answers are generated using a Gemini LLM, grounded in the retrieved context.
-- Both long-term (vector DB) and short-term (chat history) memory are maintained.
-- The app supports both text-based and scanned PDFs (via OCR).
-- Evaluation scripts and a REST API are included for completeness.
-
-### **Assessment Questions**
-
-**1. What method or library did you use to extract the text, and why? Did you face any formatting challenges with the PDF content?**  
-- Used `pdfplumber` for text-based PDFs and `pytesseract` (OCR) for scanned/image-based PDFs.  
-- Formatting challenges included page numbers, headers/footers, and line breaks, which were addressed with regex-based cleaning.
-
-**2. What chunking strategy did you choose (e.g. paragraph-based, sentence-based, character limit)? Why do you think it works well for semantic retrieval?**  
-- Used character-based chunking with overlap (e.g., 1024 chars, 300 overlap).  
-- This ensures context is preserved and relevant information is not split across chunks, improving semantic retrieval.
-
-**3. What embedding model did you use? Why did you choose it? How does it capture the meaning of the text?**  
-- Used Google’s `models/embedding-001` for multilingual support and strong semantic understanding.  
-- It captures the meaning of both Bangla and English text, enabling effective cross-language retrieval.
-
-**4. How are you comparing the query with your stored chunks? Why did you choose this similarity method and storage setup?**  
-- Used FAISS for vector storage and cosine similarity for retrieval.  
-- FAISS is efficient for large-scale vector search, and cosine similarity is standard for semantic comparison.
-
-**5. How do you ensure that the question and the document chunks are compared meaningfully? What would happen if the query is vague or missing context?**  
-- By using semantic embeddings and overlapping chunks, the system compares the true meaning of queries and chunks.  
-- If the query is vague or missing context, the system may retrieve less relevant chunks or respond that the answer is not available in the context.
-
-**6. Do the results seem relevant? If not, what might improve them (e.g. better chunking, better embedding model, larger document)?**  
-- Results are generally relevant for well-formed queries.  
-- Improvements could include paragraph/MCQ-based chunking, more advanced cleaning, or using a larger/more specialized embedding model.
-
----
-
-## Notes
-
-- **Tesseract Path:**  
-  Make sure to set the correct path for Tesseract OCR in your code as shown above.
- ** This app could be further improved such as:
- - Adding an option for MCQ mode and CQ mode.
- - As we can already add multiple pdfs, we can use it in many other ways such as comparing Resumes and other stuffs too.
- - Moreover, It is kind of in a generalized state. We can work more on specific pdf criterias too if given the goal!!
- - The prompt is designed to  give the answers in the asked language.
- - If given cloud access, it could be hosted too.
-- **API Documentation:**  
-  See FastAPI docs at `/docs` after running the API.
-
----
-
+Feel free to fork, contribute, or reach out for collaboration!
