@@ -1,0 +1,17 @@
+This is an example of a well-written email. The model will use this as a reference.
+
+Subject: Inquiry regarding PhD opportunities in Computational Neuroscience
+
+Dear Dr. Emily Carter,
+
+I am writing to express my keen interest in the doctoral program at the University of Tech and your research in particular. I am a recent graduate from State University with a B.S. in Computer Science, and I have been following your work on neural data analysis, especially your recent publication, "Interpreting Large-Scale Neural Recordings via Deep Learning."
+
+My undergraduate research focused on applying machine learning models to biological datasets, and I believe my experience aligns well with your lab's focus. I am particularly excited about the prospect of contributing to your ongoing projects on brain-computer interfaces.
+
+I have attached my CV for your consideration. Would you be open to a brief conversation about your research and potential opportunities in your lab?
+
+Thank you for your time and consideration.
+
+Sincerely,
+
+Alex Doe

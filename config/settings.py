@@ -1,0 +1,5 @@
+CHUNK_SIZE = 1024
+CHUNK_OVERLAP = 300
+TEMPERATURE = 0.4
+EMBEDDING_MODEL = "models/embedding-001"
+LLM_MODEL = "gemini-2.5-flash"

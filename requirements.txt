@@ -4,10 +4,11 @@ python-dotenv
 langchain
 PyPDF2
 chromadb
-faiss-cpu
 langchain_google_genai
 pdfplumber
 pytesseract
 tabulate
 fastapi
 uvicorn
+requests
+beautifulsoup4
